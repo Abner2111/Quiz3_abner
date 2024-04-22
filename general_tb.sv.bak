@@ -1,0 +1,5 @@
+module general_tb();
+logic clk, rst,finished, a, b,encender;
+module Quiz3_digitales(.rst(rst),.clk(clk),.finished(finished), .a(a), .b(b), .encender(encender));
+
+endmodule

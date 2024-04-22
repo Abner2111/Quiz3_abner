@@ -1,0 +1,2 @@
+module FSM(input logic clk, rst, finalizar, dos_p,
+				output logic encender);

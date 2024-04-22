@@ -1,0 +1,44 @@
+|Quiz3_digitales
+rst => rst.IN2
+clk => clk.IN1
+finished => finished.IN1
+a => a.IN2
+b => clk_r.IN1
+b => prev_b.DATAIN
+b => _.IN1
+encender <= FSM:fsm.encender
+
+
+|Quiz3_digitales|FSM:fsm
+clk => state~1.DATAIN
+rst => state~3.DATAIN
+finalizar => Selector0.IN2
+finalizar => next_state.00.DATAB
+dos_p => Selector1.IN2
+dos_p => Selector0.IN1
+encender <= encender.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Quiz3_digitales|SerialInputRegister:SerialRegister
+clk => reg_data[0].CLK
+clk => reg_data[1].CLK
+clk => reg_data[2].CLK
+clk => reg_data[3].CLK
+reset => reg_data[0].ACLR
+reset => reg_data[1].ACLR
+reset => reg_data[2].ACLR
+reset => reg_data[3].ACLR
+serial_in => reg_data[3].DATAIN
+data_out[0] <= reg_data[0].DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= reg_data[1].DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= reg_data[2].DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= reg_data[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Quiz3_digitales|mux_2to1:mux_input
+sel => Decoder0.IN0
+In_0 => data_out.DATAA
+In_1 => data_out.DATAB
+data_out <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

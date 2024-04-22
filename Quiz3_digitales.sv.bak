@@ -1,0 +1,5 @@
+module Quiz3_digitales(input logic rst,clk,finished, output logic encender);
+
+
+
+endmodule

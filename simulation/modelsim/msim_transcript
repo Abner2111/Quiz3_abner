@@ -1,0 +1,84 @@
+# do Quiz3_digitales_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /home/abner/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+/home/abner/Desktop/Quiz3_digitales {/home/abner/Desktop/Quiz3_digitales/FSM.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:37:05 on Apr 21,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Quiz3_digitales" /home/abner/Desktop/Quiz3_digitales/FSM.sv 
+# -- Compiling module FSM
+# 
+# Top level modules:
+# 	FSM
+# End time: 23:37:05 on Apr 21,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Quiz3_digitales {/home/abner/Desktop/Quiz3_digitales/Quiz3_digitales.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:37:05 on Apr 21,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Quiz3_digitales" /home/abner/Desktop/Quiz3_digitales/Quiz3_digitales.sv 
+# -- Compiling module Quiz3_digitales
+# 
+# Top level modules:
+# 	Quiz3_digitales
+# End time: 23:37:05 on Apr 21,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Quiz3_digitales {/home/abner/Desktop/Quiz3_digitales/SerialInputRegister.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:37:05 on Apr 21,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Quiz3_digitales" /home/abner/Desktop/Quiz3_digitales/SerialInputRegister.sv 
+# -- Compiling module SerialInputRegister
+# 
+# Top level modules:
+# 	SerialInputRegister
+# End time: 23:37:05 on Apr 21,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Quiz3_digitales {/home/abner/Desktop/Quiz3_digitales/mux_2to1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:37:05 on Apr 21,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Quiz3_digitales" /home/abner/Desktop/Quiz3_digitales/mux_2to1.sv 
+# -- Compiling module mux_2to1
+# 
+# Top level modules:
+# 	mux_2to1
+# End time: 23:37:05 on Apr 21,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+/home/abner/Desktop/Quiz3_digitales {/home/abner/Desktop/Quiz3_digitales/general_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:37:05 on Apr 21,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Quiz3_digitales" /home/abner/Desktop/Quiz3_digitales/general_tb.sv 
+# -- Compiling module general_tb
+# 
+# Top level modules:
+# 	general_tb
+# End time: 23:37:05 on Apr 21,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  general_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" general_tb 
+# Start time: 23:37:05 on Apr 21,2024
+# Loading sv_std.std
+# Loading work.general_tb
+# Loading work.Quiz3_digitales
+# Loading work.FSM
+# Loading work.SerialInputRegister
+# Loading work.mux_2to1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : /home/abner/Desktop/Quiz3_digitales/general_tb.sv(64)
+#    Time: 440 ps  Iteration: 0  Instance: /general_tb
+# Break in Module general_tb at /home/abner/Desktop/Quiz3_digitales/general_tb.sv line 64
+# End time: 23:37:14 on Apr 21,2024, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0
